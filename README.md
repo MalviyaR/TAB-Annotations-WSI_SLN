@@ -1,0 +1,1 @@
+Pixel level annotations for diagnostically relevant tissue region, tissues present in the background for understanding context and artefacts are provided in this TAB dataset. These annotations are done on selected 73 abnormal WSI from the training set of Camelyon16 dataset, which has lymph node metastatic WSI of breast.

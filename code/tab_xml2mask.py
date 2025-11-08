@@ -1,13 +1,17 @@
-import os
-import multiresolutionimageinterface as mir
-'''multiresolutionimageinterface needs to be installed to run the following code. 
+
+'''
+xml files from TAB annotations and their correspoing WSI from Camelyon16 abnormal class of training set are used to create binary masks of the annotated regions.
+multiresolutionimageinterface needs to be installed to run the following code. 
 This code is directly taken from Camelyon16 dataset website'''
 
+import os
+import multiresolutionimageinterface as mir
+
 # Following paths are provided for ease of use. Please change the paths according to your location and directory sructure
-wsi_path = "D:\\Camelyon16\\Abnormal\\"
-xml_path = "D:\\Camelyon16\\Annotations\\Tissue"
+wsi_path = "D:\\Camelyon16\\Abnormal\\tumor_034.tif"
+xml_path = "D:\\Camelyon16\\Annotations\\Tissue\T_tumor_034.xml"
 mask_dest_dir = "D:\\Camelyon16\\Masks\\Tissue"
-wsi_name = "tumor_034.tif"
+wsi_name = "tumor_034"
 
 reader = mir.MultiResolutionImageReader()
 mr_image = reader.open(wsi_path)  #<Path to WSI file stored as .tif>
